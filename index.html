@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Curtis's Christmas cards</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+    <h1>Enter Your Name</h1>
+  <h2>Please enter your first name for individuals, and last names for families</h2>
+    <form id="nameForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <button type="button" onclick="redirectToPage()">Submit</button>
+    </form>
 
+    <script>
+        function redirectToPage() {
+            var name = document.getElementById("name").value;
+            if (name.trim() !== "") {
+                window.location.href = name + ".html";
+            } else {
+                alert("Please enter a valid name");
+            }
+        }
+    </script>
+</body>
+</html>
